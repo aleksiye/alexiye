@@ -19,6 +19,10 @@ nav ul {
   display: flex;
   flex-flow: row wrap;
   gap: 10px;
+  li {
+    display: flex;
+    align-items: center;
+  }
 }
 #about {
   display: flex;
@@ -30,41 +34,39 @@ nav ul {
 }
 #profile {
   display: flex;
-width: 100%;
   gap: 4rem;
-  height: 400px;
+  height: auto;
   #profile-content {
+    padding-top: 1rem;
     width: 50%;
-    #title {
-      position: relative;
-      left: 0;
-      top: 5%;
-      h1 {
-        font-size: 4rem;
-      }
+    h1 {
+      font-size: 4rem;
     }
-    #subtitle {
-      position: relative;
-      top: 10%;
-      left: 10%;
-      p {
-        font-weight: 600;
-        font-size: 1.5rem;
-      }
-    }
-    #content {
-      position: relative;
-      top: 10%;
-      left: 10%;
+  }
+  #subtitle {
+    p {
+      font-weight: 600;
+      font-size: 1.5rem;
     }
   }
 }
-.grid{
-    article{
-        img{
-            width: 100%;
-            height: auto;
-        }
-    }
-}
 
+.grid {
+  article {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+#fixed-icons {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 2rem;
+}
+#top-img{
+    position: relative;
+    top: 0;
+    left: 0;
+}

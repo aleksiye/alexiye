@@ -1,4 +1,4 @@
-@use 'variables'as v;
+@use "variables" as v;
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -28,21 +28,21 @@
 }
 .rel-container {
   position: relative;
-  border-radius: 50%;
+  display: block;
   width: 400px;
-  height: auto;
-  overflow: hidden;
+  height: fit-content;
   img {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 24rem;
+    width: 100%;
     height: auto;
   }
 }
 .container {
+  width: 100%;
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 .anchor-btn {
   padding: 1rem 2rem;
@@ -52,8 +52,8 @@
     color: v.$off-white !important;
   }
 }
-.grid{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }

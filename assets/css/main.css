@@ -89,6 +89,10 @@ nav ul {
   flex-flow: row wrap;
   gap: 10px;
 }
+nav ul li {
+  display: flex;
+  align-items: center;
+}
 
 #about {
   display: flex;
@@ -101,39 +105,37 @@ nav ul {
 
 #profile {
   display: flex;
-  width: 100%;
   gap: 4rem;
-  height: 400px;
+  height: auto;
 }
 #profile #profile-content {
+  padding-top: 1rem;
   width: 50%;
 }
-#profile #profile-content #title {
-  position: relative;
-  left: 0;
-  top: 5%;
-}
-#profile #profile-content #title h1 {
+#profile #profile-content h1 {
   font-size: 4rem;
 }
-#profile #profile-content #subtitle {
-  position: relative;
-  top: 10%;
-  left: 10%;
-}
-#profile #profile-content #subtitle p {
+#profile #subtitle p {
   font-weight: 600;
   font-size: 1.5rem;
-}
-#profile #profile-content #content {
-  position: relative;
-  top: 10%;
-  left: 10%;
 }
 
 .grid article img {
   width: 100%;
   height: auto;
+}
+
+#fixed-icons {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 2rem;
+}
+
+#top-img {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .flex-row {
@@ -170,22 +172,23 @@ nav ul {
 
 .rel-container {
   position: relative;
-  border-radius: 50%;
+  display: block;
   width: 400px;
-  height: auto;
-  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .rel-container img {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 24rem;
+  width: 100%;
   height: auto;
 }
 
 .container {
+  width: 100%;
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .anchor-btn {
@@ -200,5 +203,41 @@ nav ul {
 .grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+@media (max-width: 1919px) {
+  header {
+    position: static;
+  }
+}
+@media (max-width: 1279px) {
+  #fixed-icons {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  #profile {
+    flex-direction: column;
+  }
+  #profile #profile-content {
+    width: 100%;
+  }
+  #profile #profile-content #title,
+  #profile #profile-content #subtitle {
+    text-align: center;
+  }
+  #profile #profile-content #content {
+    padding: 0px 10px;
+    text-align: justify;
+  }
+  #profile #composite-profile-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 401px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
 }/*# sourceMappingURL=main.css.map */

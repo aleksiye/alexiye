@@ -33,7 +33,7 @@
     </header>
     <main>
       <div id="profile" class="container">
-        <div class="rel-container">
+        <div id="composite-profile-img" class="rel-container">
           <img
             src="./assets/img/blob.svg"
             alt="a simple svg blob for styling"
@@ -43,6 +43,7 @@
             alt="another simple svg blob for styling"
           />
           <img
+            id="top-img"
             src="./assets/img/profile-removebg.png"
             alt="My profile picture"
           />
@@ -61,14 +62,17 @@
         </div>
       </div>
       <div id="projects" class="container">
-        <h2>Projects and Accomplishments</h2>
-        <p>
-          Throughout my academic journey, I have worked on a variety of projects
-          that showcase my skills and growth. From designing visually
-          captivating interfaces to developing interactive web applications,
-          each project has contributed to my developmenet as a web professional.
-        </p>
+       
         <section class="grid">
+          <article>
+            <h2>Projects and Accomplishments</h2>
+            <p>
+              Throughout my academic journey, I have worked on a variety of projects
+              that showcase my skills and growth. From designing visually
+              captivating interfaces to developing interactive web applications,
+              each project has contributed to my developmenet as a web professional.
+            </p>
+          </article>
           <article>
             <a href="https://github.com/aleksiye/aleksiye"
               ><h3>Fashion Website UI</h3>
@@ -149,7 +153,6 @@
     <footer>
       <div>
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#education">Education</a></li>
@@ -168,5 +171,11 @@
         </ul>
       </div>
     </footer>
+    <div id="fixed-icons" class="flex-col">
+      <a href="https://github.com/aleksiye" target="_blank"><i class="zmdi zmdi-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/aleksije-vuki%C4%87-6667ab268/" target="_blank"><i class="zmdi zmdi-linkedin"></i>
+      </a>
+    </div>
   </body>
 </html>
