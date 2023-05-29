@@ -35,10 +35,6 @@ footer {
     gap: 1rem;
   }
 }
-#about {
-  display: flex;
-  flex-flow: row wrap;
-}
 
 .flex-col {
   max-width: 45%;
@@ -71,6 +67,7 @@ footer {
     h2{
         font-size: 3rem;
         text-align: center;
+        margin-bottom: 1rem;
     }
 }
 
@@ -79,6 +76,9 @@ footer {
     img {
       width: 100%;
       height: auto;
+    }
+    .anchor-btn{
+        margin: 1rem 2rem;
     }
   }
 }

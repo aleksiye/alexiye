@@ -33,6 +33,11 @@
     }
   }
 }
+@media (max-width:863px){
+    .btn-example{
+        text-align: center;
+    }
+}
 @media (max-width: 401px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

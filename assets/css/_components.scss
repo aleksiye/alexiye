@@ -1,4 +1,29 @@
 @use "variables" as v;
+@mixin float($direction: left) {
+  @if $direction == left {
+    float: left;
+  } @else if $direction == right {
+    float: right;
+  } @else {
+    float: left;
+  }
+}
+@mixin flex(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: flex-start,
+  $align: stretch,
+  $align-content: flex-start,
+  $gap: 0px
+) {
+  display: flex;
+  flex-direction: #{$direction};
+  flex-wrap: #{$wrap};
+  justify-content: #{$justify};
+  align-items: #{$align};
+  align-content: #{$align-content};
+  gap: #{$gap};
+}
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -11,12 +36,13 @@
 .clearfix::after {
   content: "";
   clear: both;
+  display: table;
 }
-.flt-l{
-    float: left;
+.flt-l {
+  float: left;
 }
-.flt-r{
-    float: right;
+.flt-r {
+  float: right;
 }
 .filter {
   width: inherit;
@@ -51,10 +77,20 @@
   max-width: 1140px;
   margin: 2rem auto;
 }
-.anchor-btn {
+@mixin black-btn {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   background-color: #000;
+  color: v.$off-white;
+}
+@mixin white-btn{
+    @include black-btn;
+    background: none;
+    color: #000;
+    border: 0.25rem solid v.$dark-gray;
+}
+.anchor-btn {
+  @include black-btn;
   a {
     color: v.$off-white !important;
   }
@@ -64,9 +100,16 @@
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-.image-card{
-
+.image-card {
 }
-.text-card{
-    
+.text-card {
+    padding: 0 2rem;
+}
+.btn-example {
+  text-align: right;
+  span{
+    @include white-btn;
+    font-weight: 500;
+    display: inline-block;
+  }
 }

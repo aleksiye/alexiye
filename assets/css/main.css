@@ -82,11 +82,6 @@ footer ul {
   gap: 1rem;
 }
 
-#about {
-  display: flex;
-  flex-flow: row wrap;
-}
-
 .flex-col {
   max-width: 45%;
 }
@@ -116,11 +111,15 @@ footer ul {
 #skills h2 {
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .grid article img {
   width: 100%;
   height: auto;
+}
+.grid article .anchor-btn {
+  margin: 1rem 2rem;
 }
 
 #fixed-icons {
@@ -150,6 +149,7 @@ footer ul {
 .clearfix::after {
   content: "";
   clear: both;
+  display: table;
 }
 
 .flt-l {
@@ -202,6 +202,7 @@ footer ul {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   background-color: #000;
+  color: #F5F5F5;
 }
 .anchor-btn a {
   color: #F5F5F5 !important;
@@ -211,6 +212,25 @@ footer ul {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.text-card {
+  padding: 0 2rem;
+}
+
+.btn-example {
+  text-align: right;
+}
+.btn-example span {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #000;
+  color: #F5F5F5;
+  background: none;
+  color: #000;
+  border: 0.25rem solid #8F929E;
+  font-weight: 500;
+  display: inline-block;
 }
 
 @media (max-width: 1919px) {
@@ -246,6 +266,11 @@ footer ul {
   #profile #composite-profile-img {
     width: 80%;
     margin: 0 auto;
+  }
+}
+@media (max-width: 863px) {
+  .btn-example {
+    text-align: center;
   }
 }
 @media (max-width: 401px) {
