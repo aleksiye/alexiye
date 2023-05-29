@@ -12,41 +12,55 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.ico" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Portfolio | Alexiye</title>
   </head>
   <body>
     <header>
+      <div id="logo">
+        <img src="./assets/img/logo.png" alt="My logo" />
+      </div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li>
+            <div class="anchor-btn"><a href="#projects">View Work</a></div>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <div id="profile">
-        <img src="./assets/img/profile.jpg" alt="My profile picture" />
-        <div id="title"><h1>Aleksije Vukić</h1></div>
-         
-      </div>
-      <div id="about">
-        <div class="flex-col">
-          <h2>About me</h2>
-          <p>
-            Hi, my name is Aleksije Vukić. I'm a passionate and ambitious
-            student of web technologies, web design, web programming and related
-            fields. I am thrilled to showcase my journey and the skills I've
-            acquired along the way through my portfolio.
-          </p>
+      <div id="profile" class="container">
+        <div class="rel-container">
+          <img
+            src="./assets/img/blob.svg"
+            alt="a simple svg blob for styling"
+          />
+          <img
+            src="./assets/img/blob2.svg"
+            alt="another simple svg blob for styling"
+          />
+          <img
+            src="./assets/img/profile-removebg.png"
+            alt="My profile picture"
+          />
+        </div>
+        <div id="profile-content">
+          <div id="title"><h1>Aleksije Vukić</h1></div>
+          <div id="subtitle"><p>software developer.</p></div>
+          <div id="content">
+            <p>
+              Hi, I'm a passionate and ambitious student of web technologies,
+              web design, web programming and related fields. I am thrilled to
+              showcase my journey and the skills I've acquired along the way
+              through my portfolio.
+            </p>
+          </div>
         </div>
       </div>
-      <div id="projects">
+      <div id="projects" class="container">
         <h2>Projects and Accomplishments</h2>
         <p>
           Throughout my academic journey, I have worked on a variety of projects
@@ -54,18 +68,28 @@
           captivating interfaces to developing interactive web applications,
           each project has contributed to my developmenet as a web professional.
         </p>
-        <section>
+        <section class="grid">
           <article>
             <a href="https://github.com/aleksiye/aleksiye"
               ><h3>Fashion Website UI</h3>
               <img src="./assets/img/fashion.jpg" alt="Image of a website"
             /></a>
           </article>
-          <article></article>
-          <article></article>
+          <article>
+            <a href="https://github.com/aleksiye/aleksiye"
+              ><h3>Fashion Website UI</h3>
+              <img src="./assets/img/fashion.jpg" alt="Image of a website"
+            /></a>
+          </article>
+          <article>
+            <a href="https://github.com/aleksiye/aleksiye"
+              ><h3>Fashion Website UI</h3>
+              <img src="./assets/img/fashion.jpg" alt="Image of a website"
+            /></a>
+          </article>
         </section>
       </div>
-      <div id="skills">
+      <div id="skills" class="container">
         <h2>Skills</h2>
         <p>
           Over the course of my studies, I have gained proficiency in several
@@ -110,7 +134,7 @@
           </li>
         </ul>
       </div>
-      <div id="education">
+      <div id="education" class="container">
         <h2>Education and Learning</h2>
         <p>
           I am currently studying at <a href="https://www.ict.edu.rs/">ICT</a>.

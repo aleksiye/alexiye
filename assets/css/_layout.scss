@@ -1,19 +1,17 @@
 @use "variables" as v;
 header {
-  padding-left: 5%;
-  padding-right: 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-left: 5px;
+  padding-right: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 4rem;
-  &::after {
-    content: "";
-    width: 75%;
-    height: 0.25rem;
-    margin: 0 auto;
-    background-color: #000;
-    border-radius: 0.25rem;
+  img {
+    height: 4rem;
   }
 }
 
@@ -30,3 +28,43 @@ nav ul {
 .flex-col {
   max-width: 45%;
 }
+#profile {
+  display: flex;
+width: 100%;
+  gap: 4rem;
+  height: 400px;
+  #profile-content {
+    width: 50%;
+    #title {
+      position: relative;
+      left: 0;
+      top: 5%;
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    #subtitle {
+      position: relative;
+      top: 10%;
+      left: 10%;
+      p {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+    #content {
+      position: relative;
+      top: 10%;
+      left: 10%;
+    }
+  }
+}
+.grid{
+    article{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+

@@ -1,13 +1,59 @@
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+@use 'variables'as v;
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.flex-col{
-    display: flex;
-    flex-direction: column;
-    
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
-.clearfix{
-    clear: both;
+.clearfix {
+  clear: both;
+}
+.filter {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 700ms;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.cover {
+  width: 100%;
+  height: 400px;
+}
+.rel-container {
+  position: relative;
+  border-radius: 50%;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24rem;
+    height: auto;
+  }
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.anchor-btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #000;
+  a {
+    color: v.$off-white !important;
+  }
+}
+.grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
 }
