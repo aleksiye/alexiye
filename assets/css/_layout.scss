@@ -1,0 +1,32 @@
+@use "variables" as v;
+header {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4rem;
+  &::after {
+    content: "";
+    width: 75%;
+    height: 0.25rem;
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 0.25rem;
+  }
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+#about {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-col {
+  max-width: 45%;
+}
