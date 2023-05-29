@@ -24,6 +24,17 @@ nav ul {
     align-items: center;
   }
 }
+footer {
+  padding: 2rem 0;
+  font-weight: 600;
+  p,
+  a {
+    color: v.$dark-gray;
+  }
+  ul {
+    gap: 1rem;
+  }
+}
 #about {
   display: flex;
   flex-flow: row wrap;
@@ -42,13 +53,25 @@ nav ul {
     h1 {
       font-size: 4rem;
     }
-  }
-  #subtitle {
-    p {
-      font-weight: 600;
-      font-size: 1.5rem;
+    #subtitle {
+      p {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: v.$dark-gray;
+      }
+    }
+    #content {
+      font-size: 1.25rem;
+      font-weight: 500;
     }
   }
+}
+#skills{
+    
+    h2{
+        font-size: 3rem;
+        text-align: center;
+    }
 }
 
 .grid {
@@ -65,8 +88,8 @@ nav ul {
   right: 20px;
   font-size: 2rem;
 }
-#top-img{
-    position: relative;
-    top: 0;
-    left: 0;
+#top-img {
+  position: relative;
+  top: 0;
+  left: 0;
 }

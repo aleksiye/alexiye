@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;800&family=Montserrat:wght@200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;800&family=Montserrat:wght@200;400;500;600;800&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,30 +44,6 @@ footer {
   width: 100%;
 }
 
-h1 {
-  font-family: "EB Garamond", serif;
-}
-
-h2 {
-  font-family: "EB Garamond", serif;
-}
-
-h3 {
-  font-family: "EB Garamond", serif;
-}
-
-h4 {
-  font-family: "EB Garamond", serif;
-}
-
-h5 {
-  font-family: "EB Garamond", serif;
-}
-
-h6 {
-  font-family: "EB Garamond", serif;
-}
-
 header {
   position: sticky;
   top: 0;
@@ -94,6 +70,18 @@ nav ul li {
   align-items: center;
 }
 
+footer {
+  padding: 2rem 0;
+  font-weight: 600;
+}
+footer p,
+footer a {
+  color: #8F929E;
+}
+footer ul {
+  gap: 1rem;
+}
+
 #about {
   display: flex;
   flex-flow: row wrap;
@@ -115,9 +103,19 @@ nav ul li {
 #profile #profile-content h1 {
   font-size: 4rem;
 }
-#profile #subtitle p {
+#profile #profile-content #subtitle p {
   font-weight: 600;
   font-size: 1.5rem;
+  color: #8F929E;
+}
+#profile #profile-content #content {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+#skills h2 {
+  font-size: 3rem;
+  text-align: center;
 }
 
 .grid article img {
@@ -149,8 +147,17 @@ nav ul li {
   flex-direction: column;
 }
 
-.clearfix {
+.clearfix::after {
+  content: "";
   clear: both;
+}
+
+.flt-l {
+  float: left;
+}
+
+.flt-r {
+  float: right;
 }
 
 .filter {
@@ -188,7 +195,7 @@ nav ul li {
 .container {
   width: 100%;
   max-width: 1140px;
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 
 .anchor-btn {
@@ -214,6 +221,11 @@ nav ul li {
 @media (max-width: 1279px) {
   #fixed-icons {
     display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1141px) {
+  .container {
+    padding: 0 1rem;
   }
 }
 @media (max-width: 769px) {
