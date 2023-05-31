@@ -33,10 +33,8 @@
   display: flex;
   flex-direction: column;
 }
-.clearfix::after {
-  content: "";
+.clearfix{
   clear: both;
-  display: table;
 }
 .flt-l {
   float: left;
@@ -76,8 +74,10 @@
   width: 100%;
   max-width: 1140px;
   margin: 2rem auto;
+  padding: 0 1rem;
 }
 @mixin black-btn {
+  display: inline-block;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   background-color: #000;
@@ -101,6 +101,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 .image-card {
+
 }
 .text-card {
     padding: 0 2rem;
@@ -112,4 +113,13 @@
     font-weight: 500;
     display: inline-block;
   }
+}
+@mixin form-element{
+  padding: 0.5rem 1em;
+  border: none;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+@mixin focused-element{
+  outline-color: v.$accent;
 }

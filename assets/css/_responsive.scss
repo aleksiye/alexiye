@@ -1,4 +1,4 @@
-@media (max-width: 1919px) {
+@media (max-width: 1799px) {
   header {
     position: static;
   }
@@ -12,6 +12,14 @@
     .container{
         padding: 0 1rem;
     }
+    #footer-links{
+      margin-left: 1rem;
+    }
+}
+@media (max-width:863px){
+  .btn-example{
+      text-align: center;
+  }
 }
 @media (max-width: 769px) {
   #profile {
@@ -32,16 +40,55 @@
       margin: 0 auto;
     }
   }
+
 }
-@media (max-width:863px){
-    .btn-example{
-        text-align: center;
+@media (max-width: 728px){
+  footer{
+    #footer-links{
+      float: left;
     }
+  }
+}
+@media (max-width: 649px){
+  .container{
+    padding: 0;
+  }
+}
+@media (max-width: 499px){
+  #contact{
+    .grid{
+      padding: 1rem;
+    }
+  }
+}
+@media (max-width: 434px){
+  #contact{
+    border-left: none;
+    border-right: none;
+    .grid{
+     padding: 0.2rem;
+    } 
+   }
+   form{
+    input[type=submit]{
+      display: block;
+      margin: 0 auto;
+    }
+   }
 }
 @media (max-width: 401px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 }
+@media (max-width: 365px){
+  #logo{
+    display: none;
+  }
+  nav{
+    margin: 0 auto;
+  }
+}
 @media (max-width: 321px) {
+  
 }

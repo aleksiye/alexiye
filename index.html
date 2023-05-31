@@ -19,11 +19,13 @@
   <body>
     <header>
       <div id="logo">
-        <img src="./assets/img/logo.png" alt="My logo" />
+        <a href="index.html">
+          <img src="./assets/img/logo.png" alt="My logo"
+        /></a>
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#Contact">Contact</a></li>
           <li>
             <div class="anchor-btn"><a href="#projects">View Work</a></div>
@@ -76,8 +78,8 @@
           <article>
             <a href="https://github.com/aleksiye/aleksiye"
               ><h3>Static Website</h3>
-              <img src="./assets/img/fashion.jpg" alt="Image of a website"
-            /></a>
+              <img src="./assets/img/fashion.jpg" alt="Image of a website" />
+            </a>
           </article>
           <article>
             <a href="https://github.com/aleksiye/alexiye"
@@ -85,7 +87,8 @@
               <img
                 src="./assets/img/responsive-site.jpg"
                 alt="Image of a responsive website"
-            /></a>
+              />
+            </a>
           </article>
           <article>
             <a href="https://github.com/aleksiye/"
@@ -156,22 +159,54 @@
           latest industry trends and best practices.
         </p>
       </div>
+      <div id="contact" class="container">
+        <div class="grid">
+          <div class="form-header"><h3>Let's get in touch</h3></div>
+          <div class="form-block">
+            <form
+              action="submit.php"
+              method="post"
+              autocomplete="on"
+              name="message-form"
+              target="_self"
+            >
+              <div>
+                <label class="form-label" for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div>
+                <label class="form-label" for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div>
+                <label class="form-label" for="message">Your message:</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="container">
       <div id="copyright-notice" class="flt-l">
         <p>Copyright &copy 2023 Aleksije Vukić. All rights reserved.</p>
       </div>
-      <div id="footer-links" class="flt-r clearfix">
+      <div id="footer-links" class="flt-r">
         <ul class="flex-row">
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <div class="clearfix"></div>
     </footer>
     <div id="developers" class="container">
-      <a href="https://github.com/aleksiye/alexiye/tree/master/assets/css" target="_blank">
+      <a
+        href="https://github.com/aleksiye/alexiye/tree/master/assets/css"
+        target="_blank"
+      >
         Sass source code: &nbsp;
         <i class="zmdi zmdi-language-css3"></i>
       </a>
