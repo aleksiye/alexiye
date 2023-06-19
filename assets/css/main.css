@@ -24,9 +24,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-a:hover {
-  font-weight: 600;
-}
 
 p {
   font-size: 1rem;
@@ -107,11 +104,15 @@ footer {
 }
 
 .anchor-btn {
+  transition: all 300ms;
   display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 1em 2em;
+  border-radius: 0.25em;
   background-color: #000;
   color: #F5F5F5;
+}
+.anchor-btn:hover {
+  background-color: #F99417;
 }
 .anchor-btn a {
   color: #F5F5F5 !important;
@@ -123,6 +124,23 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
+.image-card {
+  background: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.image-card .card-header {
+  margin-bottom: 0.5rem;
+}
+.image-card .card-body {
+  font-size: 0.8rem;
+}
+.image-card .card-footer {
+  margin-top: 1rem;
+}
+
 .text-card {
   padding: 0 2rem;
 }
@@ -131,9 +149,10 @@ footer {
   text-align: right;
 }
 .btn-example span {
+  transition: all 300ms;
   display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 1em 2em;
+  border-radius: 0.25em;
   background-color: #000;
   color: #F5F5F5;
   background: none;
@@ -141,6 +160,9 @@ footer {
   border: 0.25rem solid #8F929E;
   font-weight: 500;
   display: inline-block;
+}
+.btn-example span:hover {
+  background-color: #F99417;
 }
 
 header {
@@ -209,6 +231,9 @@ footer div {
   font-size: 1.25rem;
   font-weight: 500;
 }
+#profile #profile-content #content p {
+  margin-bottom: 1em;
+}
 
 #skills h2 {
   font-size: 3rem;
@@ -219,9 +244,6 @@ footer div {
 .grid article img {
   width: 100%;
   height: auto;
-}
-.grid article .anchor-btn {
-  margin: 1rem 2rem;
 }
 
 #fixed-icons {
@@ -273,11 +295,16 @@ form input[type=text]:focus, form input[type=email]:focus, form textarea:focus {
   outline-color: #F99417;
 }
 form input[type=submit] {
+  transition: all 300ms;
   display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 1em 2em;
+  border-radius: 0.25em;
   background-color: #000;
   color: #F5F5F5;
+  border: none;
+}
+form input[type=submit]:hover {
+  background-color: #F99417;
 }
 form textarea {
   resize: none;

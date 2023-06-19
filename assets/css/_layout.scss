@@ -63,6 +63,9 @@ footer {
     #content {
       font-size: 1.25rem;
       font-weight: 500;
+      p{
+        margin-bottom: 1em;
+      }
     }
   }
 }
@@ -81,9 +84,7 @@ footer {
       width: 100%;
       height: auto;
     }
-    .anchor-btn{
-        margin: 1rem 2rem;
-    }
+    
   }
 }
 #fixed-icons {
@@ -125,6 +126,7 @@ form{
   }
   input[type=submit]{
     @include c.black-btn;
+    border: none;
   }
   textarea{
     resize: none;

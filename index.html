@@ -8,12 +8,19 @@
       name="description"
       content="Portfolio website done as a school project, may or may not be representative of my actual Portfolio"
     />
+    <meta
+      name="keywords"
+      content="portfolio, education, html, css, javascript"
+    />
+    <meta name="author" content="Aleksije Vukic" />
+    <meta name="copyright" content="Aleksije Vukic" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
     />
     <link rel="icon" type="image/x-icon" href="assets/img/logo.ico" />
-    <link rel="stylesheet" href="./assets/css/min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Portfolio | Alexiye</title>
   </head>
   <body>
@@ -60,6 +67,9 @@
               showcase my journey and the skills I've acquired along the way
               through my portfolio.
             </p>
+            <a class="anchor-btn" href="curriculum-vitae.pdf" target="_blank"
+              >Download CV</a
+            >
           </div>
         </div>
       </div>
@@ -75,13 +85,27 @@
               web professional.
             </p>
           </article>
-          <article>
-            <a href="https://github.com/aleksiye/aleksiye"
-              ><h3>Static Website</h3>
-              <img src="./assets/img/fashion.jpg" alt="Image of a website" />
-            </a>
+          <article class="image-card">
+            <div class="card-header"><h3>Static Website</h3></div>
+            <img src="./assets/img/fashion.jpg" alt="Image of a website" />
+            <div class="card-body">
+              <p>
+                This project holds a special place in my journey as a web
+                developepr. It marks the first website I created from start to
+                finish. Although I had prior knowledge of HTML and CSS, this
+                project was the first "official" one that encompassed all the
+                essential elements.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="anchor-btn">
+                <a href="https://github.com/aleksiye/aleksiye"
+                  >View source code</a
+                >
+              </div>
+            </div>
           </article>
-          <article>
+          <article class="image-card">
             <a href="https://github.com/aleksiye/alexiye"
               ><h3>Responsive Website</h3>
               <img
@@ -90,7 +114,7 @@
               />
             </a>
           </article>
-          <article>
+          <article class="image-card">
             <a href="https://github.com/aleksiye/"
               ><h3>Future Project</h3>
               <img

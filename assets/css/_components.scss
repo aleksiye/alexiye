@@ -77,11 +77,15 @@
   padding: 0 1rem;
 }
 @mixin black-btn {
+  transition: all 300ms;
   display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 1em 2em;
+  border-radius: 0.25em;
   background-color: #000;
   color: v.$off-white;
+  &:hover{
+    background-color: v.$accent;
+  }
 }
 @mixin white-btn{
     @include black-btn;
@@ -101,10 +105,26 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 .image-card {
-
+  background: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 v.$shadow;
+  .card-header{
+    margin-bottom: .5rem;
+  }
+  .card-body{
+    font-size: 0.8rem;
+  }
+  .card-footer{
+    margin-top: 1rem;
+  }
 }
 .text-card {
     padding: 0 2rem;
+}
+.skills-card{
+
 }
 .btn-example {
   text-align: right;
