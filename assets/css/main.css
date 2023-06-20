@@ -41,6 +41,17 @@ footer {
   width: 100%;
 }
 
+@keyframes bouncy {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -202,6 +213,16 @@ footer {
 }
 .btn-example span:hover {
   background: none;
+}
+
+.arrow {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.bouncy {
+  animation: bouncy 2s infinite;
 }
 
 .hidden {
