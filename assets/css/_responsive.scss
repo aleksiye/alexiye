@@ -9,12 +9,17 @@
   }
 }
 @media (min-width:769px) and (max-width: 1141px){
-    .container{
+    .container, .wide-container{
         padding: 0 1rem;
     }
     #footer-links{
       margin-left: 1rem;
     }
+}
+@media (max-width: 949px){
+  .form-img{
+    display: none;
+  }
 }
 @media (max-width:863px){
   .btn-example{
@@ -49,8 +54,15 @@
     }
   }
 }
+@media (max-width: 689px){
+  #logo{
+    p{
+      display: none;
+    }
+  }
+}
 @media (max-width: 649px){
-  .container{
+  .container, .wide-container{
     padding: 0;
   }
 }
@@ -83,7 +95,7 @@
 }
 @media (max-width: 365px){
   #logo{
-    display: none;
+    display: none !important;
   }
   nav{
     margin: 0 auto;
@@ -91,4 +103,9 @@
 }
 @media (max-width: 321px) {
   
+}
+@media (min-width: 848px) and (max-width: 1263px){
+    .hidden{
+      display: block;
+    }
 }

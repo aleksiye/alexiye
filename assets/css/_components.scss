@@ -70,11 +70,18 @@
     height: auto;
   }
 }
-.container {
+@mixin container{
   width: 100%;
   max-width: 1140px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+.container {
+  @include container;
+}
+.wide-container{
+  @include container;
+  max-width: 1550px;
 }
 @mixin black-btn {
   transition: all 300ms;
@@ -92,6 +99,9 @@
     background: none;
     color: #000;
     border: 0.25rem solid v.$dark-gray;
+    &:hover{
+      background:none;
+    }
 }
 .anchor-btn {
   @include black-btn;
@@ -105,26 +115,48 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 .image-card {
+  position: relative;
+  overflow:hidden;
   background: #fff;
-  padding: 1rem;
+  padding-bottom: 1rem;
   border: none;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 v.$shadow;
   .card-header{
     margin-bottom: .5rem;
+    img{
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      max-height: 300px;
+      object-position: center;
+      transition: 200ms transform ease-in-out;
+      &:hover{
+        transform: scale(1.025);
+      }
+    }
   }
   .card-body{
     font-size: 0.8rem;
+    margin: 1rem 1rem;
   }
   .card-footer{
+    min-height: 3em;
     margin-top: 1rem;
+    margin: 0 1rem;
+    .anchor-btn{
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+    }
   }
 }
 .text-card {
     padding: 0 2rem;
 }
-.skills-card{
-
+.center-text{
+  text-align: center;
 }
 .btn-example {
   text-align: right;
@@ -142,4 +174,7 @@
 }
 @mixin focused-element{
   outline-color: v.$accent;
+}
+.hidden{
+  display:none;
 }

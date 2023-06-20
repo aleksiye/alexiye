@@ -103,6 +103,14 @@ footer {
   padding: 0 1rem;
 }
 
+.wide-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1550px;
+}
+
 .anchor-btn {
   transition: all 300ms;
   display: inline-block;
@@ -125,8 +133,10 @@ footer {
 }
 
 .image-card {
+  position: relative;
+  overflow: hidden;
   background: #fff;
-  padding: 1rem;
+  padding-bottom: 1rem;
   border: none;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -134,15 +144,41 @@ footer {
 .image-card .card-header {
   margin-bottom: 0.5rem;
 }
+.image-card .card-header img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 300px;
+  -o-object-position: center;
+     object-position: center;
+  transition: 200ms transform ease-in-out;
+}
+.image-card .card-header img:hover {
+  transform: scale(1.025);
+}
 .image-card .card-body {
   font-size: 0.8rem;
+  margin: 1rem 1rem;
 }
 .image-card .card-footer {
+  min-height: 3em;
   margin-top: 1rem;
+  margin: 0 1rem;
+}
+.image-card .card-footer .anchor-btn {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
 }
 
 .text-card {
   padding: 0 2rem;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .btn-example {
@@ -164,9 +200,15 @@ footer {
 .btn-example span:hover {
   background-color: #F99417;
 }
+.btn-example span:hover {
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
 
 header {
-  position: sticky;
   top: 0;
   z-index: 1000;
   padding-left: 5px;
@@ -179,6 +221,15 @@ header {
 }
 header img {
   height: 4rem;
+}
+header #logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+header #logo p {
+  color: #8F929E;
 }
 
 nav ul {
@@ -267,12 +318,35 @@ footer div {
   padding: 3rem;
 }
 
+#projects-subheading h2 {
+  font-size: 2.25rem;
+}
+#projects-subheading p {
+  margin-left: 0.25rem;
+}
+
+#special-filler img {
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  -o-object-position: left top;
+     object-position: left top;
+}
+
 .form-header {
   margin: 0 auto;
 }
 .form-header h3 {
   margin-top: 1.65rem;
   font-size: 2.5rem;
+}
+.form-header .form-img {
+  width: 100%;
+}
+.form-header .form-img img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 form div {
@@ -322,11 +396,16 @@ form textarea {
   }
 }
 @media (min-width: 769px) and (max-width: 1141px) {
-  .container {
+  .container, .wide-container {
     padding: 0 1rem;
   }
   #footer-links {
     margin-left: 1rem;
+  }
+}
+@media (max-width: 949px) {
+  .form-img {
+    display: none;
   }
 }
 @media (max-width: 863px) {
@@ -359,8 +438,13 @@ form textarea {
     float: left;
   }
 }
+@media (max-width: 689px) {
+  #logo p {
+    display: none;
+  }
+}
 @media (max-width: 649px) {
-  .container {
+  .container, .wide-container {
     padding: 0;
   }
 }
@@ -389,9 +473,14 @@ form textarea {
 }
 @media (max-width: 365px) {
   #logo {
-    display: none;
+    display: none !important;
   }
   nav {
     margin: 0 auto;
+  }
+}
+@media (min-width: 848px) and (max-width: 1263px) {
+  .hidden {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */
